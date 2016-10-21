@@ -1,13 +1,1 @@
-bin/
-conf/
-etc/
-extensions/
-jre/
-lib/
-local-scripts/
-logs/
-machineagent.jar
-monitors/
-monitorsLibs/
-readme.txt
-scripts/
+appd/
