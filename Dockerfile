@@ -6,7 +6,7 @@
 #
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM ubuntu
 
 ADD start_machine_agent_kubernetes.sh .
 # Install Java.
