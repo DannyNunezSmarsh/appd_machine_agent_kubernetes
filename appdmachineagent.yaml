@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  labels:
+    tier: monitoring
+    app: appdynamics
+    version: v1
+  name: appd-machineagent
+spec:
+  template:
+    metadata:
+      name: appd-machineagent
+      labels:
+        app: appdynamics
+    spec:
+      containers:
+      - name: appdmachineagent
+        image: gcr.io/$PROJECT_ID/appdmachineagent:latest
+        command: [ "/start_machine_agent_kubernetes.sh" ]
