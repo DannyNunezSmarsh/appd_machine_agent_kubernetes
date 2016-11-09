@@ -15,5 +15,13 @@ spec:
     spec:
       containers:
       - name: appdmachineagent
-        image: gcr.io/$PROJECT_ID/appdmachineagent:latest
+        image: markjeffery/appd_machine_agent_kubernetes:latest
         command: [ "/start_machine_agent_kubernetes.sh" ]
+        volumeMounts:
+        - mountPath: /appd_machine_agent
+          name: machine-agent
+      volumes:
+      - name: machine-agent
+        hostPath:
+          path: /Users/mark.jeffery/Documents/kubernetes/MachineAgent
+

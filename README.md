@@ -5,3 +5,7 @@ Download the AppDynamics Standalone machine agent (no JRE) and unzip to /appd/ma
 
 Edit conf/controller_info.xml to define the location of your AppDynamics controller
 
+## Instructions for building docker image (GKE)
+
+docker build -t gcr.io/$PROJECT_ID/appdmachineagent:latest .
+gcloud docker push gcr.io/$PROJECT_ID/appdmachineagent:latest
