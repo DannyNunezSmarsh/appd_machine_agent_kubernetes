@@ -25,3 +25,7 @@ The start_machine_agent.sh script will modify the file, substituting the hostnam
 *This means that this mount point can't be shared amongst multiple Docker hosts.*
 
 Edit conf/controller_info.xml to define the location of your AppDynamics controller
+
+## TODO
+
+*if there is more than 1 appdynamics machine agent in a node, then the script will not work, as it returns each pod name. The script should be fixed so that it only shows the nodename for this pod.
