@@ -16,7 +16,7 @@ When configuring the AppDynamics Docker extension, enter
 
 ``` yaml
 tcpSockets:
-    - baseUrl: http://KUBERNETES_SERVICE_HOST:2375
+    - baseUrl: http://$KUBERNETES_SERVICE_HOST:2375
       name: Server1
 ```
 
